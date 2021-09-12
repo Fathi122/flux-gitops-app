@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: flux-gitops-app
+  name: flux-gitops-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flux-gitops-app
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: flux-gitops-app
+    spec:
+      containers:
+      - image: taf122/flux-gitops-app:1.0
+        name: flux-gitops-app
+        ports:
+        - containerPort: 8080
+        resources: {}
+status: {}
