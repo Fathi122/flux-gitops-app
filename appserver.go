@@ -10,7 +10,7 @@ import (
 func hello(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("content-type", "application/json")
 	w.WriteHeader(http.StatusOK)
-	w.Write([]byte(`{"message": "Welcome Page !"}`))
+	w.Write([]byte(`{"message": "Welcome Page for flux gitops test!"}`))
 }
 func router() http.Handler {
 	m := http.NewServeMux()
