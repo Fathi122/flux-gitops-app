@@ -18,7 +18,7 @@ spec:
         app: flux-gitops-app
     spec:
       containers:
-      - image: taf122/flux-gitops-app:1.0
+      - image: taf122/flux-gitops-app:2.0
         name: flux-gitops-app
         ports:
         - containerPort: 8080
