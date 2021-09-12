@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: flux-gitops-app
+  name: flux-gitops-app
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: flux-gitops-app
+  type: ClusterIP
+status:
+  loadBalancer: {}
